@@ -4,12 +4,18 @@ const yesBtn = document.querySelector('.yes-btn');
 const noBtn = document.querySelector('.no-btn');
 const wrapperRect = wrapper.getBoundingClientRect();
 const noBtnRect = noBtn.getBoundingClientRect();
+const cta = document.querySelector('.btn-group')
 yesBtn.addEventListener('click', () => {
     question.innerHTML = 'Thank you for yesss... :)';
 });
-noBtn.addEventListener('mouseover', () => {
-    const i = Math.floor(Math.random() * (wrapperRect.width - noBtnRect.width)) + 1;
-    const j = Math.floor(Math.random() * (wrapperRect.height - noBtnRect.height)) + 1;
-    noBtn.style.left = i + 'px';
-    noBtn.style.top = j + 'px';
-});
+noBtn.addEventListener('mouseenter', () => {
+    const yesIndex = Array.from(cta.children).
+    indexOf(yesBtn);
+    const noIndex = Array.from(cta.children).
+    indexOf(noBtn);
+    if (yesIndex < noIndex) {
+        cta.insertBefore(noBtn, yesBtn);
+    } else {
+        cta.insertBefore(yesBtn, noBtn)
+    }    
+})

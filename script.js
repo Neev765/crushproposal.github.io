@@ -5,8 +5,6 @@ const noBtn = document.querySelector('.no-btn');
 const wrapperRect = wrapper.getBoundingClientRect();
 const noBtnRect = noBtn.getBoundingClientRect();
 const cta = document.querySelector('.btn-group')
-yesBtn.addEventListener('click', () => {
-    question.innerHTML = 'Thank you for yesss... :)';
 });
 noBtn.addEventListener('mouseenter', () => {
     const yesIndex = Array.from(cta.children).

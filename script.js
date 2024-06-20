@@ -6,7 +6,7 @@ const wrapperRect = wrapper.getBoundingClientRect();
 const noBtnRect = noBtn.getBoundingClientRect();
 const cta = document.querySelector('.btn-group')
 yesBtn.addEventListener('click', () => {
-    question.innerHTML = 'I know you wanna say Yess ;)';
+    question.innerHTML = 'I know you wanna say yess ;)';
 });
 noBtn.addEventListener('mouseenter', () => {
     const yesIndex = Array.from(cta.children).
